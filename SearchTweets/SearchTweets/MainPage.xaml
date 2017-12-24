@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SearchTweets"
+             x:Class="SearchTweets.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Tam-Tech!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+            <Button Text="Search" VerticalOptions="Center" HorizontalOptions="Center" Clicked="NavigateToSearchPage_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

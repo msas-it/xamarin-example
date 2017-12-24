@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchTweets.Views.SearchTwitterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Twitter!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Search Query" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+            <Entry x:Name="txtQuery" Placeholder="Enter a keyword to search" Text="{Binding Query, Mode=TwoWay}"></Entry>
+            <Button x:Name="btnSearch" Text="Search" Command="{Binding SearchTwitterCommand}" IsEnabled="{Binding ReadyToSearch}"></Button>
+            <ListView ItemsSource="{Binding SearchResultItems}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Title}" Detail="{Binding ShortDescription}" ImageSource="{Binding Photo}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
